@@ -1,0 +1,10 @@
+---
+name: NoVoid
+main: TheBurritoDevs\Main
+author: BaconOFBurger
+version: 1.0.0
+api:
+- 3.0.0
+- 4.0.0
+description: NoFall plugin
+...
