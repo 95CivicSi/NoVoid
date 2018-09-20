@@ -31,9 +31,9 @@ class Main extends PluginBase implements Listener {
     {
         $player = $event->getPlayer();
         $playerN = $player->getName();
-        if ($event->getPlayer()->getY() < -5) {
+        if ($event->getPlayer()->getY() < -2) {
             $event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
-			$event->getPlayer()->sendPopup(C::RED . C::BOLD ."You fell in void, teleporting back to SPAWN");
+			$event->getPlayer()->sendPopup(C::RED . C::BOLD ."You fell in void, teleporting back to spawn");
                 return true;
         }
     }
