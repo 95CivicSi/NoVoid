@@ -1,6 +1,6 @@
 ---
 name: NoVoid
-main: TheBurritoDevs\NoVoid
+main: TheBurritoDevs\NoVoid\NoVoid
 author: BaconOFBurger
 version: 1.0.0
 api:

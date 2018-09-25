@@ -1,6 +1,6 @@
 <?php
 
-namespace TheBurritoDevs;
+namespace TheBurritoDevs\NoVoid;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerMoveEvent;
