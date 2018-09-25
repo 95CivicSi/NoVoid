@@ -7,7 +7,7 @@ use pocketmine\event\player\PlayerMoveEvent;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat as C;
 
-class Main extends PluginBase implements Listener {
+class NoVoid extends PluginBase implements Listener {
 
 	private $players = [];
 
