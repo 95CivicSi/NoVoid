@@ -2,14 +2,10 @@
 
 namespace TheBurritoDevs;
 
-use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
-use pocketmine\utils\TextFormat as C;
-use pocketmine\Player;
-use pocketmine\level\Position;
-use pocketmine\level\Level;
-use pocketmine\math\Vector3;
 use pocketmine\event\player\PlayerMoveEvent;
+use pocketmine\plugin\PluginBase;
+use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase implements Listener {
 
