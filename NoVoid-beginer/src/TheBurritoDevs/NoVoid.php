@@ -9,8 +9,6 @@ use pocketmine\utils\TextFormat as C;
 
 class NoVoid extends PluginBase implements Listener {
 
-	private $players = [];
-
 	public function onEnable() {
 		$this->getLogger()->info("");
 		$this->getLogger()->info("---");
@@ -25,10 +23,9 @@ class NoVoid extends PluginBase implements Listener {
 
 	public function onMove(PlayerMoveEvent $event) {
 		$player = $event->getPlayer();
-		$playerN = $player->getName();
-		if ($event->getPlayer()->getY() < -2) {
-			$event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
-			$event->getPlayer()->sendPopup(C::RED . C::BOLD . "You fell in void, teleporting back to spawn");
+		if ($player->getY() < -2) {
+			$player->teleport($player->getLevel()->getSafeSpawn());
+			$player->sendPopup(C::RED . C::BOLD . "You fell in void, teleporting back to spawn");
 			return true;
 		}
 	}
