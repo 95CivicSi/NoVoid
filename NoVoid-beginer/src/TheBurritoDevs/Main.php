@@ -9,28 +9,27 @@ use pocketmine\utils\TextFormat as C;
 
 class Main extends PluginBase implements Listener {
 
-    private $players = [];
+	private $players = [];
 
-	public function onEnable(){
+	public function onEnable() {
 		$this->getLogger()->info("");
 		$this->getLogger()->info("---");
 		$this->getLogger()->info("PLUGIN: EasyJobs");
 		$this->getLogger()->info("AUTHOR: TheBurritoDev's, known as BaconOFBurger.");
 		$this->getLogger()->info("---");
 		$this->getLogger()->info("");
-		$this->getServer()->getPluginManager()->registerEvents($this ,$this);
+		$this->getServer()->getPluginManager()->registerEvents($this, $this);
 		$this->saveDefaultConfig();
 		$this->reloadConfig();
-        }
+	}
 
-    public function onMove(PlayerMoveEvent $event)
-    {
-        $player = $event->getPlayer();
-        $playerN = $player->getName();
-        if ($event->getPlayer()->getY() < -2) {
-            $event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
-			$event->getPlayer()->sendPopup(C::RED . C::BOLD ."You fell in void, teleporting back to spawn");
-                return true;
-        }
-    }
+	public function onMove(PlayerMoveEvent $event) {
+		$player = $event->getPlayer();
+		$playerN = $player->getName();
+		if ($event->getPlayer()->getY() < -2) {
+			$event->getPlayer()->teleport($event->getPlayer()->getLevel()->getSafeSpawn());
+			$event->getPlayer()->sendPopup(C::RED . C::BOLD . "You fell in void, teleporting back to spawn");
+			return true;
+		}
+	}
 }
